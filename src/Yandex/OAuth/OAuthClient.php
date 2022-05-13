@@ -41,7 +41,7 @@ class OAuthClient extends AbstractServiceClient
     /**
      * @var string
      */
-    protected $serviceDomain = 'oauth.yandex.ru';
+    protected $serviceDomain = 'oauth.yandex.com';
     /**
      * @var string
      */

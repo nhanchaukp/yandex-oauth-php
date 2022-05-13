@@ -1,5 +1,5 @@
 {
-  "name": "yandex-market/yandex-market-php-oauth",
+  "name": "nhanchaukp/yandex-oauth php",
   "description": "Yandex PHP OAuth library.",
   "keywords":["yandex","sdk", "OAuth"],
   "type":"library",
@@ -15,14 +15,13 @@
   },
   "authors": [
     {
-      "name": "Kirill Litvinov",
-      "email": "ym-sdk@yandex-team.ru"
+      "name": "NhanChauKP",
+      "email": "ctnhan044@gmail.com"
     }
   ],
   "autoload": {
     "psr-0": {
-      "Yandex": "src/",
-      "Yandex\\Tests": "tests/"
+      "Yandex": "src/"
     }
   }
 }

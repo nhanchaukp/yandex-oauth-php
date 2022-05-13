@@ -132,6 +132,15 @@ class OAuthClient extends AbstractServiceClient
 
         return $this;
     }
+    
+    
+    /**
+     * @return string
+     */
+    public function getRefreshToken()
+    {
+        return $this->refreshToken;
+    }
 
     /**
      * Return object of Client without auth headers
@@ -301,7 +310,6 @@ class OAuthClient extends AbstractServiceClient
             'client_secret' => $this->clientSecret,
         ];
         $formParams = array_merge($formParams, $params);
-
         try {
             $response = $client->request(
                 'POST',
@@ -312,6 +320,7 @@ class OAuthClient extends AbstractServiceClient
                         $this->clientSecret,
                     ],
                     'form_params' => $formParams,
+                    'verify' => false
                 ]
             );
         } catch (ClientException $ex) {
@@ -351,6 +360,7 @@ class OAuthClient extends AbstractServiceClient
                 '/device/code',
                 [
                     'form_params' => $formParams,
+                    'verify' => false
                 ]
             );
         } catch (ClientException $ex) {
@@ -398,7 +408,8 @@ class OAuthClient extends AbstractServiceClient
                         'code' => $deviceCode,
                         'client_id' => $this->clientId,
                         'client_secret' => $this->clientSecret,
-                    ]
+                    ],
+                    'verify' => false
                 ]
             );
         } catch (ClientException $ex) {
@@ -438,7 +449,8 @@ class OAuthClient extends AbstractServiceClient
                         'refresh_token' => $refreshToken,
                         'client_id' => $this->clientId,
                         'client_secret' => $this->clientSecret,
-                    ]
+                    ],
+                    'verify' => false
                 ]
             );
         } catch (ClientException $ex) {

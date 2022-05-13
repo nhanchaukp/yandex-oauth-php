@@ -1,5 +1,5 @@
 {
-  "name": "nhanchaukp/yandex-oauth php",
+  "name": "nhanchaukp/yandex-oauth-php",
   "description": "Yandex PHP OAuth library.",
   "keywords":["yandex","sdk", "OAuth"],
   "type":"library",
